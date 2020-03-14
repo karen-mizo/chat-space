@@ -32,7 +32,8 @@ Things you may want to cover:
   |password|string|null: false|
   
     ### Association
-   - has_many :groups, through:  :member
+   - has_many :groups, through:  :members
+   - has_many :members
    - has_many :messages
 
 * ## groupテーブル
@@ -41,7 +42,8 @@ Things you may want to cover:
   |name|string|null: false|
   
    ### Association
-   - has_many :users, through:  :member
+   - has_many :users, through:  :members
+   - has_many :members
    - has_many :messages
 
 
