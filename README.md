@@ -27,21 +27,21 @@ Things you may want to cover:
 * ## userテーブル
   |colum|type|option|
   |----|----|----|
-  |username|string|null: false|
+  |name|string|null: false|
   |email|string|null: false, unique: true|
   |password|string|null: false|
   
     ### Association
-   - has_many :groups
+   - has_many :groups, through:  :member
    - has_many :messages
 
 * ## groupテーブル
   |colum|type|option|
   |----|----|----|
-  |groupname|string|null: false|
+  |name|string|null: false|
   
    ### Association
-   - has_many :users
+   - has_many :users, through:  :member
    - has_many :messages
 
 
