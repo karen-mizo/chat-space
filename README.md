@@ -27,8 +27,8 @@ Things you may want to cover:
 * ## userテーブル
   |colum|type|option|
   |----|----|----|
-  |user_name|string|null: false|
-  |e_mail|string|null: false, unique: true|
+  |username|string|null: false|
+  |email|string|null: false, unique: true|
   |password|string|null: false|
   
     ### Association
@@ -38,7 +38,7 @@ Things you may want to cover:
 * ## groupテーブル
   |colum|type|option|
   |----|----|----|
-  |group_name|text|null: false|
+  |groupname|string|null: false|
   
    ### Association
    - has_many :users
@@ -51,7 +51,7 @@ Things you may want to cover:
   |body|text||  
   |image|string||
   |user_id|integer|null: false, foreign_key: true|
-  |group_id|integer|null: false,foreign_key: true|
+  |group_id|integer|null: false, foreign_key: true|
   
   ### Association
    - belongs_to :user
