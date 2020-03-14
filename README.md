@@ -59,7 +59,7 @@ Things you may want to cover:
 
 
 
-* ## menberテーブル
+* ## memberテーブル
   |colum|type|option|
   |----|----|----|
   |user_id|integer|null: false, foreign_key: true|
