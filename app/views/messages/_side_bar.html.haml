@@ -1,0 +1,18 @@
+.side_bar
+  .side_bar__header
+    .side_bar__header__box
+      .side_bar__header__box-name
+        name
+      .side_bar__header__box-icon
+        =link_to "#" , class: "criate-group" do
+          =icon("fas","edit")
+        =link_to "#" , class: "setting" do
+          =icon("fas","cog")
+
+  .side_bar__list
+    =link_to "#",class:"side_bar__group" do
+      .side_bar__list__group
+        .side_bar__list__group-name
+          group name
+        .side_bar__list__group-message
+          messeage
