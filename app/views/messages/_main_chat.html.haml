@@ -25,8 +25,8 @@
     .message_form__box
 
       .message_form__input
-        %input.message_form__input-text{:type=>"text",:name=>"message",:placeholder=>"type a message"}
+        %input.message_form__input-text{type:"text",name:"message",placeholder:"type a message"}
         %label{class: "message_form__input-image"} 
           = icon('fas', 'image')
-          %input{:type=>"file", :class=>"message-image"}
-      %input{:type => "submit" ,:class => "submit",:value=>"Send"}
+          %input{type:"file", class:"message-image"}
+      %input{type: "submit" ,class:"submit",value:"Send"}
