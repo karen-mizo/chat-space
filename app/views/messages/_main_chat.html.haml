@@ -2,31 +2,26 @@
   .main_header
     .main_header__box
       %p.main_header__box-name
-        group name
-      %p.main_header__box-member
-        group member
+        = @group.name
+      .main_header__box-member
+        Member : 
+        %ul
+          - @group.users.each do |user|
+            %li= user.name
 
-    =link_to "#", class:"edit" do
+    =link_to edit_group_path(@group),class:"edit" do
       .main_header__edit-btn
         Edit
 
   .chat_message
-    .chat_message__post
-      .chat_message__post__user
-        %p.chat_message__post__user-name
-          name
-        %p.chat_message__post__user-date
-          2020/2/3(friday) 17:00:00
-      %p.chat_message__post_text
-        messeage
-        
+    = render @messages
+
   .message_form
-
     .message_form__box
-
-      .message_form__input
-        %input.message_form__input-text{type:"text",name:"message",placeholder:"type a message"}
-        %label{class: "message_form__input-image"} 
-          = icon('fas', 'image')
-          %input{type:"file", class:"message-image"}
-      %input{type: "submit" ,class:"submit",value:"Send"}
+      = form_for [@group, @message] do |f|
+        .message_form__input
+          = f.text_field :body, class: 'message_form__input-text',placeholder: 'type a message'
+          = f.label :image, class: "message_form__input-image" do
+            = icon('fas', 'image')
+            = f.file_field :image, class:"message-image"
+        = f.submit 'Send',class:"submit"
