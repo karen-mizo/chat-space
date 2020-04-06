@@ -116,6 +116,7 @@
     height: calc(100vh - 190px);
     padding-top: 35px;
     background-color: #fafafa;
+    overflow: scroll;
     &__post{
       padding: 0px 0px 46px 40px;
       &__user{
